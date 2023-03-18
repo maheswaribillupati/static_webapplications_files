@@ -1,0 +1,117 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>signup-form</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="{% static 'css/css2.css' %}">
+    <style>
+        body{
+            margin: 150px 0 0 100px;
+            background-image: url(https://www.shutterstock.com/image-photo/bird-living-on-flowers-260nw-448536196.jpg);
+            background-size: cover;
+        }
+        fieldset{
+            width:fit-content;
+            height:350px;
+            background:linear-gradient(45deg,red,yellow) ;
+            border:2px solid black;
+            border-radius:30px ;
+            color:ghostwhite;
+        }
+        table{
+            margin-top:4px;
+
+        }
+        input{
+            border:2px solid black;
+            border-radius:30px ;
+        }
+        legend{
+            text-align: center;
+            color:ghostwhite;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <a href="{% url 'doors' %}">NAVIGATE TO DOORS PAGE</a><br>
+  <a href="{% url 'layouts' %}">NAVIGATE TO LAYOUTS PAGE</a><br>
+  <a href="{% url 'universal' %}">NAVIGATE TO UNIVERSAL PAGE</a> 
+    <div class="animate__animated animate__bounce animate__delay-2s">
+        <form>
+            <fieldset>
+                <legend>Sign-up</legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td align="center">
+                            <input type="name" placeholder="FirstName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input type="name" placeholder="LastName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input type="number" placeholder="+91-0000000000">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input type="email" placeholder="abc@gmail.com">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input type="text"  placeholder="DOB dd/mm/yyyy">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="radio" name="gender">Male
+                            <input type="radio" name="gender">Female
+                            <input type="radio" name="gender">Others
+                            <input type="password" placeholder="strong password">
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input type="password" placeholder="confirm password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <lable for="country">country:</lable>
+                            <select>
+                                <option value="">---select---</option>
+                                <option value="">India</option>
+                                <option value="">Pakistan</option>
+                                <option value="">Bangalore</option>
+                                <option value="">Srilanka</option>
+                            </select>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input type="submit" value="submit">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+
+  
+</body>
+</html>

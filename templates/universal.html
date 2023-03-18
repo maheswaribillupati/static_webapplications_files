@@ -1,0 +1,49 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>universal selector</title>
+    <link rel="stylesheet" href="{% static 'css/css4.css' %}">
+    <style>
+        *{
+            background-color: black;
+            color: ghostwhite;
+            border: 2px double red;
+            text-shadow: 0 0 15px blueviolet;
+            font-style: italic;
+            padding:10px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px white;
+            background-image: url(https://drscdn.500px.org/photo/85544189/m%3D900/v2?sig=de6d37129c50c0bb1b8748bfe5e30a44fe4426d58f9bb57c42dfa92916b52507);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            <marquee behaviour="alternate"direction=" ">
+                ok google----!
+            </marquee>
+        </h1>
+        <h1>
+            <marquee behaviour="alternate"direction="right">
+                hey mahidhar---!
+            </marquee>
+        </h1>
+        <h1>
+            <marquee behaviour="alternate"direction=" ">
+                Alexa-----?????
+            </marquee>
+        </h1>
+    </div>
+    
+
+    <a href="{% url 'doors' %}">NAVIGATE TO DOORS PAGE</a><br>
+  <a href="{% url 'layouts' %}">NAVIGATE TO LAYOUTS PAGE</a><br>
+  <a href="{% url 'form' %}">NAVIGATE TO FORM PAGE</a> 
+</body>
+</html>

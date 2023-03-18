@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>doors</title>
+    <link rel="stylesheet" href="{% static 'css/css1.css' %}" >
+    <style>
+        body{
+            position: relative;
+            left: 35%;
+            top: 100px;
+            background-image: url(https://thumbs.dreamstime.com/b/colorful-waterfall-waterfall-has-bright-green-colors-waterfall-colorful-leaves-summer-beautiful-waterfall-181349809.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #main{
+            width: 287px;
+            height: 300px;
+            display: flex;
+            overflow: hidden;
+        }
+        img{
+            width:inherit ;
+            height:inherit;
+        }
+        #main:hover>img{
+            transition:all 5s linear ;
+            transform: scale(1.2,1.2);
+        }
+        #door1{
+            background-color: rgb(23, 236, 23);
+            width:15%;
+            height:inherit;
+            transform-origin:left ;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        #main:hover #door1{
+            transition: all 29s linear;
+            transform: perspective(400px)rotateY(90deg);
+        }
+        #door2{
+            background-color:rgb(23, 236, 23) ;
+            width:15%;
+            height: inherit;
+            transform-origin: right;
+            position: absolute;
+            top:0;
+            left:120px;
+        }
+        #main:hover #door2{
+            transition: all 29s linear;
+            transform:perspective(400px)rotateY(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <img src="https://i.pinimg.com/originals/ec/79/e3/ec79e3dc356a2fa4385dc0d1a496fa6b.jpg "alt="">
+        <div id="door1"></div>
+        <div id="door2"></div>
+    </div> 
+    <a href="{% url 'form' %}">NAVIGATE TO FORM PAGE</a><br>
+    <a href="{% url 'layouts' %}">NAVIGATE TO LAYOUTS PAGE</a><br>
+    <a href="{% url 'universal' %}">NAVIGATE TO UNIVERSAL PAGE</a>
+</body>
+</html>

@@ -1,0 +1,172 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>layout</title>
+    <link rel="stylesheet" href="{% static 'css/css3.css' %}">
+    <style>
+        body{
+            width:fit-content;
+            height:fit-content;
+    
+            background-image: url(https://cdn.pixabay.com/photo/2015/07/29/22/56/taj-mahal-866692__480.jpg);
+            background-size: cover;
+        }
+        #parent{
+            width:100%;
+            height:620px;
+            display:grid;
+            grid-template-areas: 
+            "a a"
+            "b c"
+            "d d";
+            grid-template-columns: 600px 300px;
+            grid-template-rows: 80px 500px 100px;
+    
+    
+        }
+
+        #parent>nav{
+            grid-area:a;
+        }
+        #parent>section{
+            grid-area:b;
+            text-align: center;
+            margin-top: 150px;
+            color:ghostwhite;
+        }
+        #parent>aside{
+            grid-area:c;
+            float:right;
+            margin-right: 20px;
+        }
+        #parent>footer{
+            grid-area:d;
+            color:ghostwhite;
+            
+        }
+        nav{
+            padding:10px;
+            text-align: right;
+        }
+        fieldset{
+            width:300px;
+            height:525px;
+            padding:10px;
+            background:linear-gradient(45deg, red, greenyellow,blue);
+            color:black;
+            border-radius: 30px;
+            
+        }
+        fieldset>div{
+            padding:10px;
+        }
+        nav>a{
+            text-decoration: none;
+            padding:10px ;
+            text-align: right;
+            color:rgb(218, 121, 218);
+
+        }
+        article{
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+        }
+        div>button{
+            width:98%;
+            background-color: rgb(240, 81, 192);
+            color:ghostwhite;
+            height:40px;
+
+        }
+        footer{
+            margin-left: 30px;
+        }
+        footer>button{
+            background-color: rgb(241, 19, 241);
+            width:100px;
+            color:ghostwhite;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="{% url 'doors' %}">NAVIGATE TO DOORS PAGE</a><br>
+  <a href="{% url 'form' %}">NAVIGATE TO FORM PAGE</a><br>
+  <a href="{% url 'universal' %}">NAVIGATE TO UNIVERSAL PAGE</a> 
+    <div id="parent">
+        <nav>
+            <a href=""> CITIES</a>
+            <a href="">DRIVE</a>
+            <a href="">BLOG</a>
+            <a href="">PARTNERS</a>
+            <a href="">HELP</a>
+        </nav>
+        <section>
+            <article>
+                <h1>Make up to $35/hr</h1>
+                <h1>Driving Your Car</h1>
+
+            </article>
+        </section>
+        <aside>
+            
+                <form>
+                    <fieldset>
+                        <h1>APPLY NOW</h1>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque labore voluptatem quia et voluptate quos, blanditiis laborum. </div>
+                        <div>
+                            <input type="text" placeholder="first name">
+                        </div>
+                        <div>
+                             <input type="text" placeholder="last name">
+                        </div>
+                        <div>
+                             <input type="email" placeholder="email address">
+                        </div>
+                        <div>
+                             <input type="text" placeholder="city">
+
+                        </div>
+                        <div>
+                             <input type="number" placeholder="phone number">
+
+                        </div>
+                        <div>
+                             <input type="number" placeholder="promo code (optional)">
+
+                        </div>
+                        <div>
+                            <input type="checkbox" > I agree to the Lyft terms
+                        </div>
+                        <div>
+                            <button>
+                                BECOME A DRIVER
+                            </button>
+                        </div>
+                        <div>
+                            already applied? check the statusof your application here
+
+                        </div>
+
+                    </fieldset>
+
+                </form>
+            </aside>
+        <footer>
+            <h3>SEE HOW MUCH YOU CAN MAKE</h3>
+            <h5>how many hours do you want to drive this?</h5>
+            <button>hours</button>
+            <button>city</button>
+            <button>calculate</button>
+
+
+        </footer>
+
+    </div>
+    
+</body>
+</html>
